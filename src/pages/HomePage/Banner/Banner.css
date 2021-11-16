@@ -1,0 +1,14 @@
+.banner-img {
+    background-image: url(https://webneel.com/wallpaper/sites/default/files/images/07-2013/7%20bmw%20car%20wallpaper.jpg);
+    background-size: 100% 100%;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-weight: 700;
+}
+
+.banner-img h1 {
+    width: 70%;
+}

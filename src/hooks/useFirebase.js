@@ -9,7 +9,7 @@ import {
     onAuthStateChanged,
     signOut,
 } from "firebase/auth";
-import initializeAuthentication from "../pages/Firebase/firebase.init";
+import initializeAuthentication from "../pages/Login/Firebase/firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});

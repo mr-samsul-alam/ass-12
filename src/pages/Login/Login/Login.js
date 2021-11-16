@@ -123,7 +123,7 @@ const Login = () => {
                                 )}
                             </Col>
                             <Col xs={12} md={6}>
-                            <h2 className="fw-bold">Car Dealership</h2>
+                                <h2 className="fw-bold">Car Dealership</h2>
                                 <img
                                     className="img-fluid"
                                     src="https://codingwithnick.in/wp-content/uploads/2021/06/responsive-login-form-using-html-css.jpg?ezimgfmt=rs:814x458/rscb5/ng:webp/ngcb5"
