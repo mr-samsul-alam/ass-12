@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
+
 import Footer from "../../../Shared/Footer/Footer";
 import Header from "../../../Shared/Header/Header";
 import PlaceForm from "../PlaceForm/PlaceForm";
@@ -8,6 +9,7 @@ import "./PlaceOrder.css";
 
 const PlaceOrder = () => {
     const { id } = useParams();
+
     // console.log(id);
     const [order, setOrder] = useState({});
     useEffect(() => {

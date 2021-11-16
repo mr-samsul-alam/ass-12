@@ -1,9 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+
 import "./AddADrone.css";
 
 const AddADrone = () => {
     const { register, handleSubmit, reset } = useForm();
+    // const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         // console.log(data);
         const uri = `https://ancient-island-81852.herokuapp.com/products`;
