@@ -51,7 +51,7 @@ const Header = () => {
                             {user?.email ? (
                                 <span>
                                     <span><img className="w border border-2 border-dark rounded-circle" src={user?.photoURL} alt="https://cdn-icons-png.flaticon.com/512/660/660611.png" /></span>
-                                    <span className="username">
+                                    <span className="mx-2 text-dark fs-4 color fst-italic">
                                         {user?.displayName}
                                     </span>
                                     <span

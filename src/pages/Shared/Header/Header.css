@@ -17,11 +17,10 @@
     color: tomato;
 }
 
-.username {
-    margin-right: 10px;
-    color: rgb(180, 179, 179);
+.color{
+    color: tomato!important;
+    font-weight: 900;
 }
-
 .username:hover {
     color: rgb(194, 193, 193);
 }

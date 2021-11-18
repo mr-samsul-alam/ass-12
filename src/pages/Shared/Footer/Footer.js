@@ -28,7 +28,7 @@ const Footer = () => {
 
                     <Col md={6} xs={12} className="my-3">
                         <div>
-                            <h2 className="mb-3">Our Address</h2>
+                            <h2 className="mb-3">Looking for us ?</h2>
                             <div>
                                 <span> Oss B.V. Angelenweg 141 5349 </span>
                             </div>
@@ -36,7 +36,7 @@ const Footer = () => {
                                 <span>ma t/m vrij 8:00-17:30</span>
                             </div>
                             <div>
-                                <span>taherakhanom@gmail.com</span>
+                                <span>carwala@shop.com</span>
                             </div>
                             <div className="mt-2">
                                 <span>09.00 AM - 17.00 PM</span>
