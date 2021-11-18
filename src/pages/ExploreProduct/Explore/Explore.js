@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Explore.css"
 
 const Explore = () => {
     // const { setIsLoading } = useAuth();
     const [drones, setDrones] = useState([]);
 
     useEffect(() => {
-        const uri = "https://ancient-island-81852.herokuapp.com/products";
+        const uri = " https://still-inlet-59665.herokuapp.com/products";
         fetch(uri)
             .then((res) => res.json())
             .then((data) => {

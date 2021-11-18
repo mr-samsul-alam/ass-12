@@ -9,7 +9,7 @@ const PlaceForm = (props) => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         data.status = "pending";
-        const uri = "https://ancient-island-81852.herokuapp.com/orders";
+        const uri = " https://still-inlet-59665.herokuapp.com/orders";
         fetch(uri, {
             method: "POST",
             headers: {

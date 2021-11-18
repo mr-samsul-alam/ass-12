@@ -96,7 +96,7 @@ const useFirebase = () => {
 
     // for admin
     useEffect(() => {
-        fetch(`https://ancient-island-81852.herokuapp.com/users/${user.email}`)
+        fetch(` https://still-inlet-59665.herokuapp.com/users/${user.email}`)
             .then((res) => res.json())
             .then((data) => setAdmin(data.admin));
     }, [user.email]);
@@ -117,7 +117,7 @@ const useFirebase = () => {
     // save user to database
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch("https://ancient-island-81852.herokuapp.com/users", {
+        fetch(" https://still-inlet-59665.herokuapp.com/users", {
             method: method,
             headers: {
                 "content-type": "application/json",

@@ -5,7 +5,7 @@ const ManageAllOrder = () => {
     const [load, setLoad] = useState(true);
     const [manageOrder, setManageOrder] = useState([]);
     useEffect(() => {
-        fetch("https://ancient-island-81852.herokuapp.com/orders")
+        fetch(" https://still-inlet-59665.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 setManageOrder(data);
@@ -18,7 +18,7 @@ const ManageAllOrder = () => {
             "are you sure, you want to delete your Order!!!"
         );
         if (proceed) {
-            fetch(`https://ancient-island-81852.herokuapp.com/orders/${id}`, {
+            fetch(` https://still-inlet-59665.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -38,7 +38,7 @@ const ManageAllOrder = () => {
         const updatestatus = manageOrder.find((update) => update?._id === id);
         updatestatus.status = "shipped";
 
-        const uri = `https://ancient-island-81852.herokuapp.com//orders/${id}`;
+        const uri = ` https://still-inlet-59665.herokuapp.com//orders/${id}`;
         fetch(uri, {
             method: "PUT",
             headers: {

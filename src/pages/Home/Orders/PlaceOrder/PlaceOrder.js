@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     // console.log(id);
     const [order, setOrder] = useState({});
     useEffect(() => {
-        const uri = `https://ancient-island-81852.herokuapp.com//products/${id}`;
+        const uri = ` https://still-inlet-59665.herokuapp.com//products/${id}`;
         fetch(uri)
             .then((res) => res.json())
             .then((data) => setOrder(data));

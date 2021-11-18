@@ -37,7 +37,7 @@ const Login = () => {
                 <Container className="py-4">
                     <div className="box-shadows">
                         <Row>
-                            <Col xs={12} md={6}>
+                            <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
                                 {!loading && (
                                     <>
                                         <Form
@@ -95,13 +95,7 @@ const Login = () => {
                                                 </Link>
                                             </p>
                                         </Form>
-                                        <div className="google-btn">
-                                            <button
-                                                onClick={handleGoogleSignIn}
-                                            >
-                                                Google Log in
-                                            </button>
-                                        </div>
+
                                     </>
                                 )}
 
@@ -122,13 +116,14 @@ const Login = () => {
                                     </Alert>
                                 )}
                             </Col>
-                            <Col xs={12} md={6}>
-                                <h2 className="fw-bold">Car Dealership</h2>
-                                <img
-                                    className="img-fluid"
-                                    src="https://codingwithnick.in/wp-content/uploads/2021/06/responsive-login-form-using-html-css.jpg?ezimgfmt=rs:814x458/rscb5/ng:webp/ngcb5"
-                                    alt=""
-                                />
+                            <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
+                                <div className="google-btn">
+                                    <button
+                                        onClick={handleGoogleSignIn}
+                                    >
+                                        Google Log in
+                                    </button>
+                                </div>
                             </Col>
                         </Row>
                     </div>

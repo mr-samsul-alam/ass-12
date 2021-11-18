@@ -10,7 +10,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        const uri = "https://ancient-island-81852.herokuapp.com/reviews";
+        const uri = " https://still-inlet-59665.herokuapp.com/reviews";
         fetch(uri)
             .then((res) => res.json())
             .then((data) => {

@@ -8,7 +8,7 @@ import {
     useRouteMatch,
 } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import AddADrone from "../AddADrone/AddADrone";
+
 import AddReview from "../AddReview/AddReview";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
@@ -18,6 +18,7 @@ import Pay from "../Pay/Pay";
 import NotFound from "../../NotFound/NotFound";
 import "./Dashboard.css";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import AddProduct from "../AddProduct/AddProduct";
 
 const Dashboard = () => {
     const history = useHistory();
@@ -132,7 +133,7 @@ const Dashboard = () => {
                             <ManageAllOrder></ManageAllOrder>
                         </AdminRoute>
                         <AdminRoute path={`${path}/addproduct`}>
-                            <AddADrone></AddADrone>
+                            <AddProduct></AddProduct>
                         </AdminRoute>
                         <AdminRoute path={`${path}/makeadmin`}>
                             <MakeAdmin></MakeAdmin>

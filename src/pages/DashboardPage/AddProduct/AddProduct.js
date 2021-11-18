@@ -1,14 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import "./AddADrone.css";
+import "./AddProduct.css";
 
-const AddADrone = () => {
+const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
-    // const { register, handleSubmit, reset } = useForm();
+
     const onSubmit = (data) => {
-        // console.log(data);
-        const uri = `https://ancient-island-81852.herokuapp.com/products`;
+
+        const uri = `https://still-inlet-59665.herokuapp.com/products`;
         fetch(uri, {
             method: "POST",
             headers: {
@@ -58,4 +58,4 @@ const AddADrone = () => {
     );
 };
 
-export default AddADrone;
+export default AddProduct;

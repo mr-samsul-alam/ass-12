@@ -9,7 +9,7 @@ const Products = () => {
     const [drones, setDrones] = useState([]);
 
     useEffect(() => {
-        const uri = "https://ancient-island-81852.herokuapp.com/products";
+        const uri = " https://still-inlet-59665.herokuapp.com/products";
         fetch(uri)
             .then((res) => res.json())
             .then((data) => {
@@ -26,38 +26,41 @@ const Products = () => {
     }
     // setIsLoading
     return (
-        <div className="products-style">
-            <h1 className="text-center">Your Favourite Car</h1>
-            <Container>
-                <Row xs={1} md={2} lg={3} className="g-4">
+        <div className="bg-dark">
+            <h1 className="text-center text-white py-2">Your Favourite Car</h1>
+
+            <Container className="text-center pb-2">
+                <Row xs={1} md={2} lg={3} className="g-4 pb-5 ">
                     {drones.slice(0, 6).map((drone) => (
                         <Col key={drone._id}>
-                            <Card className="products-card-style">
-                                <Card.Img
-                                    variant="top"
-                                    src={drone.img}
-                                    className="products-card-img"
-                                />
+
+                            <Card className="border border-4 border-danger rounded p-2 h ">
+                                <Card.Img variant="top" className="h border border-2 rounded" src={drone.img} />
                                 <Card.Body>
-                                    <Card.Title className="products-card-title">
-                                        {drone.name}
-                                    </Card.Title>
-                                    <Card.Text className="products-card-para">
+                                    <Card.Title>{drone.name}</Card.Title>
+                                    <Card.Text>
                                         {drone.description?.slice(0, 70)}...
                                     </Card.Text>
-                                    <Card.Text className="products-card-para">
-                                        ${drone.price}
+                                    <Card.Text>
+                                        {drone.price}
                                     </Card.Text>
-                                    <Link to={`/placeorder/${drone._id}`}>
-                                        <button className="products-card-button">
-                                            Order Now
-                                        </button>
-                                    </Link>
                                 </Card.Body>
+                                <Card.Footer>
+                                    <Link to={`/placeorder/${drone._id}`}>
+                                        <button type="button" class="btn btn-outline-primary w-100"> Order Now</button>
+
+                                    </Link>
+                                </Card.Footer>
                             </Card>
+
+
                         </Col>
                     ))}
                 </Row>
+                <Link to="/explore">
+                    <button type="button" class="btn btn-outline-primary w-25 mx-auto">See more</button>
+
+                </Link>
             </Container>
         </div>
     );

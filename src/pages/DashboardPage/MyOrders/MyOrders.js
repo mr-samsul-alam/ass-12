@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [myOrder, setMyOrder] = useState([]);
     useEffect(() => {
-        const uri = `https://ancient-island-81852.herokuapp.com/orders/${user?.email}`;
+        const uri = ` https://still-inlet-59665.herokuapp.com/orders/${user?.email}`;
         fetch(uri)
             .then((res) => res.json())
             .then((data) => setMyOrder(data));
@@ -19,7 +19,7 @@ const MyOrders = () => {
             "are you sure, you want to Cancle your Order!!!"
         );
         if (proceed) {
-            fetch(`https://ancient-island-81852.herokuapp.com/orders/${id}`, {
+            fetch(` https://still-inlet-59665.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
