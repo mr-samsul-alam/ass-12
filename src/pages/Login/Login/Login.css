@@ -8,7 +8,7 @@
     text-align: center;
     border-radius: 20px;
     width: 70%;
-    background-color: #0a1931;
+ 
     border: 2px solid #da0037;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .submit-forms {
-    background-color: #0a1931;
+
     border-radius: 20px;
 }
 
@@ -27,19 +27,13 @@
     background-color: #da0037;
 }
 
-.google-btn {
-    text-align: center;
+
+.g-button:hover{
+
+    transform: scale(1.05) rotate(360deg);
+    transform-origin: center;
+    transition: 1s;
+    margin: 0;
+    
 }
 
-.google-btn button {
-    background-color: #0a1931;
-    color: aliceblue;
-    font-weight: 600;
-    padding: 9px 18px;
-    border: 2px solid #da0037;
-    border-radius: 20px;
-}
-
-.google-btn button:hover {
-    background-color: #da0037;
-}

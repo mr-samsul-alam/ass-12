@@ -22,13 +22,8 @@ const Header = () => {
             >
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <img
-                            className="headerimg"
-                            src="https://graphicsfamily.com/wp-content/uploads/2020/08/Auto-repair-Car-Logo-design-psd-1180x664.jpg"
-                            alt=""
-                        />
                         <i className="fs-3 fw-bold ">
-                            Car <span className="word-color">Dealership</span>
+                            Car <span className="word-color">Wala</span>
                         </i>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,7 +33,7 @@ const Header = () => {
                                 Home
                             </Nav.Link>
                             <Nav.Link as={Link} to="/explore">
-                                Explore-Product
+                                Product's
                             </Nav.Link>
                             {user?.email && (
                                 <Nav.Link as={Link} to="/dashboard">
@@ -55,6 +50,7 @@ const Header = () => {
                         <Nav>
                             {user?.email ? (
                                 <span>
+                                    <span><img className="w border border-2 border-dark rounded-circle" src={user?.photoURL} alt="https://cdn-icons-png.flaticon.com/512/660/660611.png" /></span>
                                     <span className="username">
                                         {user?.displayName}
                                     </span>
@@ -67,6 +63,7 @@ const Header = () => {
                                 </span>
                             ) : (
                                 <>
+                                    <span ><img className="w" src="https://cdn-icons-png.flaticon.com/512/660/660611.png" />{user?.displayName}</span>
                                     <Nav.Link
                                         as={Link}
                                         to="/login"

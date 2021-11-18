@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="footer-style py-5">
             <Container>
                 <Row>
-                    <Col md={3} xs={12} className="my-3">
+                    <Col md={6} xs={12} className="my-3">
                         <div>
-                            <h1>Car Wala </h1>
+                            <h1> Car <span className="word-color">Wala</span></h1>
                             <p>
                                 Competitive Prices on More Than 100 Million Items. Discover Products Online Now! Promotions on clothing, electronics, sports and more. Check out all the deals!
 
@@ -25,34 +25,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col md={3} xs={12} className="my-3">
-                        <div>
-                            <h2 className="mb-3">Quick Links</h2>
-                            <div>
-                                <Link to="/" className="quick-link">
-                                    Home
-                                </Link>
-                            </div>
-                            <div className="quick-link">
-                                <Link to="/contact" className="quick-link">
-                                    contact
-                                </Link>
-                            </div>
-                            <div>
-                                <Link to="/about" className="quick-link">
-                                    about
-                                </Link>
-                            </div>
-                            <div>
-                                {!user?.email && (
-                                    <Link to="/login" className="quick-link">
-                                        Log In
-                                    </Link>
-                                )}
-                            </div>
-                        </div>
-                    </Col>
-                    <Col md={3} xs={12} className="my-3">
+
+                    <Col md={6} xs={12} className="my-3">
                         <div>
                             <h2 className="mb-3">Our Address</h2>
                             <div>
@@ -69,17 +43,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col md={3} xs={12} className="my-3">
-                        <div>
-                            <h2>NEWSLETTER</h2>
-                            <input
-                                type="text"
-                                placeholder="Your Email"
-                                className="footer-input"
-                            />
-                            <button className="footer-button">Share</button>
-                        </div>
-                    </Col>
+
                 </Row>
             </Container>
             <div className="my-3">
