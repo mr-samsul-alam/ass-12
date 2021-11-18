@@ -30,8 +30,9 @@ const AddReview = () => {
                 className="w-50 mx-auto for-shadow py-3"
             >
                 <h2>Please Give a Review</h2>
-                <input    {...register("img")} defaultValue={user?.photoURL} />
-                <input class="form-control bg-dark" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled {...register("name")} defaultValue={user?.displayName} />
+                <img className='mt-2 border border-4 border-primary rounded-circle ' src={user?.photoURL} alt="" />
+                <input class="form-control bg-dark vis"     {...register("img")} defaultValue={user?.photoURL} />
+                <input class="form-control bg-dark" type="text" placeholder="Disabled input" aria-label="Disabled input example"  {...register("name")} defaultValue={user?.displayName} />
                 <textarea
                     {...register("review")}
                     placeholder="Your Review"

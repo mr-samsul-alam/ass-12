@@ -4,7 +4,10 @@
     background-color: #0a1931;
     box-shadow: rgba(194, 191, 191, 0.35) 0px 5px 15px;
 }
-
+.vis{
+    /* visibility: hidden; */
+    display: none;
+}
 .for-shadow {
     box-shadow: rgba(194, 191, 191, 0.35) 0px 5px 15px;
 }

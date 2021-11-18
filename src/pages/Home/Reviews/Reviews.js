@@ -1,14 +1,28 @@
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Spinner } from "react-bootstrap";
-import Rating from "react-rating";
-
 import useAuth from "../../../hooks/useAuth";
 import "./Reviews.css";
+
+const showRating = (star) => {
+    const stars = [];
+    const int = parseInt(star, 10)
+    for (let i = 1; i <= int; i++) {
+        stars.push(<FontAwesomeIcon className='rating-icon' icon={faStar} />)
+    }
+    return (
+        <div>{stars}</div>
+    )
+}
+
+
+
 
 const Reviews = () => {
     const { user, loading, setLoading } = useAuth();
     const [reviews, setReviews] = useState([]);
-
+    console.log(reviews)
     useEffect(() => {
         const uri = " https://still-inlet-59665.herokuapp.com/reviews";
         fetch(uri)
@@ -18,7 +32,7 @@ const Reviews = () => {
                 setLoading(false);
             });
     }, [setLoading]);
-    // console.log(reviews);
+    console.log(reviews.rating);
     if (loading) {
         return (
             <div className="text-center spiner-style">
@@ -33,16 +47,13 @@ const Reviews = () => {
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {reviews.map((review) => (
                         <Col key={review?._id}>
-                            <Card className="reviews-card-style">
+                            <Card className="">
                                 <span>
                                     <img src={review?.img} alt="" />
-                                    <Rating
-                                        className="ms-3 icon-color"
-                                        initialRating={review?.rating}
-                                        emptySymbol="far fa-star"
-                                        fullSymbol="fas fa-star"
-                                        readonly
-                                    ></Rating>
+                                    <p>{review.rating}</p>
+                                    {
+                                        showRating(review?.rating)
+                                    }
                                 </span>
                                 <Card.Body>
                                     <Card.Title className="review-card-title">
