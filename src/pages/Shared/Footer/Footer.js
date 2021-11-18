@@ -12,7 +12,7 @@ const Footer = () => {
                 <Row>
                     <Col md={3} xs={12} className="my-3">
                         <div>
-                            <h1>Car Dealership</h1>
+                            <h1>Car Wala </h1>
                             <p>
                                 Competitive Prices on More Than 100 Million Items. Discover Products Online Now! Promotions on clothing, electronics, sports and more. Check out all the deals!
 
