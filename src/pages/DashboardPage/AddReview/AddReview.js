@@ -1,8 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 import "./AddReview.css";
 
 const AddReview = () => {
+    const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         const uri = " https://still-inlet-59665.herokuapp.com/reviews";
@@ -28,12 +30,8 @@ const AddReview = () => {
                 className="w-50 mx-auto for-shadow py-3"
             >
                 <h2>Please Give a Review</h2>
-                <input
-                    {...register("img")}
-                    placeholder="Your img Url"
-                    required
-                />
-                <input {...register("name")} placeholder="Your Name" required />
+                <input    {...register("img")} defaultValue={user?.photoURL} />
+                <input class="form-control bg-dark" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled {...register("name")} defaultValue={user?.displayName} />
                 <textarea
                     {...register("review")}
                     placeholder="Your Review"

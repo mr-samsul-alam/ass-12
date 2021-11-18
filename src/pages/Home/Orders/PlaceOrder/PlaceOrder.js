@@ -10,19 +10,19 @@ import "./PlaceOrder.css";
 const PlaceOrder = () => {
     const { id } = useParams();
 
-    // console.log(id);
+    console.log(id);
     const [order, setOrder] = useState({});
     useEffect(() => {
-        const uri = ` https://still-inlet-59665.herokuapp.com//products/${id}`;
+        const uri = ` https://still-inlet-59665.herokuapp.com/products/${id}`;
         fetch(uri)
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [id]);
-    // console.log(order);
+    console.log(order);
     return (
         <>
             <Header></Header>
-            <div className="place-order py-5">
+            <div className="place-order bg-secondary py-5">
                 <h2 className="text-center my-4 place-order-header">
                     Your Order Information
                 </h2>

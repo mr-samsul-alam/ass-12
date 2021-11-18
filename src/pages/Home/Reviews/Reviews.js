@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 import "./Reviews.css";
 
 const Reviews = () => {
-    const { loading, setLoading } = useAuth();
+    const { user, loading, setLoading } = useAuth();
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
