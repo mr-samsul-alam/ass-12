@@ -9,7 +9,7 @@ const showRating = (star) => {
     const stars = [];
     const int = parseInt(star, 10)
     for (let i = 1; i <= int; i++) {
-        stars.push(<FontAwesomeIcon className='rating-icon' icon={faStar} />)
+        stars.push(<FontAwesomeIcon className='rating-icon bg' icon={faStar} />)
     }
     return (
         <div>{stars}</div>
@@ -47,19 +47,19 @@ const Reviews = () => {
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {reviews.map((review) => (
                         <Col key={review?._id}>
-                            <Card className="">
+                            <Card className="d-flex align-items-center p-2 bg-warning text-center">
                                 <span>
-                                    <img src={review?.img} alt="" />
-                                    <p>{review.rating}</p>
+                                    <img className='rounded-circle' src={review?.img} alt="" />
+                                    <p>Rating : {review.rating} star</p>
                                     {
                                         showRating(review?.rating)
                                     }
                                 </span>
                                 <Card.Body>
-                                    <Card.Title className="review-card-title">
+                                    <Card.Title className="review-card-title  text-dark">
                                         {review?.name}
                                     </Card.Title>
-                                    <Card.Text className="review-card-para">
+                                    <Card.Text className="review-card-para  text-dark">
                                         {review?.review?.slice(0, 80)}...
                                     </Card.Text>
                                 </Card.Body>

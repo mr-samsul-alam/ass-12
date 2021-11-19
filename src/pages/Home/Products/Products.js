@@ -42,7 +42,7 @@ const Products = () => {
                                         {drone.description?.slice(0, 70)}...
                                     </Card.Text>
                                     <Card.Text>
-                                        {drone.price}
+                                        ${drone.price}
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
