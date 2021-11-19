@@ -9,17 +9,18 @@ import "./About.css";
 
 const About = () => {
     return (
-        <div>
+        <div id="bg">
             <Header></Header>
-            <div className="about-style">
+            <div className="about-style flex-column">
                 <h1>About us </h1>
+
             </div>
             <div className="for-about-back">
-                <Container>
-                    <Row>
+                <Container >
+                    <Row className='d-flex '>
                         <Col xs={12} md={6}>
-                            <div>
-                                <h2>Car dealership</h2>
+                            <div className="container text-white">
+                                <h2>Car Wala</h2>
                                 <h6>
                                     The early cars were sold by automakers to customers directly or through a variety of channels, including mail order, department stores, and traveling representatives. The first dealership in the United States was established in 1898 by William E. Metzger.
                                 </h6>
@@ -34,7 +35,7 @@ const About = () => {
                         <Col xs={12} md={6}>
                             <img
                                 className="img-fluid"
-                                src="https://www.effortlessoutdoormedia.com/wp-content/uploads/2019/06/Car-dealership.jpg"
+                                src="https://www.cnet.com/a/img/7qLSeK9aw5q4oxbLKW_Fzc_mFm4=/1200x675/2020/01/07/cc9de8f0-2cf3-48bc-8a11-02b2457cbe51/ogi1-mercedes-benz-vision-avtr-concept-004.jpg"
                                 alt=""
                             />
                         </Col>

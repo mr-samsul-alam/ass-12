@@ -20,7 +20,10 @@ import "./Dashboard.css";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import AddProduct from "../AddProduct/AddProduct";
 
+
+
 const Dashboard = () => {
+    const { user } = useAuth();
     const history = useHistory();
     let { path, url } = useRouteMatch();
     const { admin, logOut } = useAuth();
@@ -28,7 +31,7 @@ const Dashboard = () => {
         logOut(history);
     };
     return (
-        <div>
+        <div >
             <div className="headerColor">
                 <h1 className="text-center">DASHBOARD</h1>
             </div>
@@ -107,17 +110,24 @@ const Dashboard = () => {
                                     </Nav.Link>
                                 </>
                             )}
-                            <button onClick={handleLogOut} className="dash-btn">
+                            <button onClick={handleLogOut} className="btn btn-outline-primary">
                                 LogOut
                             </button>
                         </Nav>
                     </div>
                 </Col>
-                <Col xs={12} md={10}>
+                <Col className="d-flex justify-content-center
+    align-items-center" xs={12} md={10}>
                     <Switch>
                         <Route exact path={path}>
-                            <div className="dash-board">
-                                <h3>Welcome to Dashboard</h3>
+                            <div className="bg-dark p-5 border  border-c border-4 border-warning d-flex flex-column justify-content-center
+    align-items-center">
+                                <img className="w-50 border border-2 border-primary rounded-circle" src={user.photoURL} alt="" />
+                                <span className="text-info fs-1 ">{user.displayName}</span>
+                                <button onClick={handleLogOut} className="btn btn-outline-primary">
+                                    LogOut
+                                </button>
+
                             </div>
                         </Route>
                         <Route path={`${path}/pay`}>
